@@ -639,6 +639,13 @@ body {
   margin-bottom: 24px;
   position: relative;
   overflow: hidden;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.doctor-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(192, 24, 24, 0.15);
 }
 
 .doctor-feature::before {
@@ -661,7 +668,10 @@ body {
   border-radius: var(--radius-md);
 }
 
-.doctor-feature-img svg { width: 100%; height: 100%; }
+.doctor-feature-img svg {
+  width: 100%; height: 100%; 
+  transition: transform 0.6s;
+}
 
 .doctor-feature-text { flex: 1; }
 
@@ -672,6 +682,15 @@ body {
   color: var(--c-red-deep);
   margin-bottom: 8px;
   line-height: 1.4;
+  transition: color 0.3s;
+}
+
+.doctor-feature:hover .doctor-feature-text h4 {
+  color: var(--c-red);
+}
+
+.doctor-feature:hover .doctor-feature-img svg {
+  transform: scale(1.05);
 }
 
 .doctor-feature-text p {
@@ -980,6 +999,8 @@ body {
   padding: 50px 24px 30px;
   text-align: center;
   position: relative;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 .footer::before {
