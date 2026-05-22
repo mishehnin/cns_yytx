@@ -582,6 +582,31 @@ body {
 
 .news-card:hover .news-card-img svg { transform: scale(1.05); }
 
+/* ============================================
+   图片填充 (替换原 SVG 占位)
+   ============================================ */
+.news-featured-img img,
+.med-card-img img,
+.news-card-img img,
+.doctor-feature-img img,
+.tip-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* 加载失败/加载中时的暖色兜底，避免黑块压抑 */
+  background: linear-gradient(135deg, #fff1d6 0%, #ffe0c2 50%, #ffd1b0 100%);
+  transition: transform 0.6s;
+}
+
+.news-featured:hover .news-featured-img img,
+.med-card:hover .med-card-img img,
+.news-card:hover .news-card-img img,
+.tip-card:hover .tip-img img,
+.doctor-feature:hover .doctor-feature-img img {
+  transform: scale(1.05);
+}
+
 .news-card-text {
   padding: 18px 20px 20px;
   flex: 1;
